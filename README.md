@@ -1,3 +1,3 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/igorbriukhovetskii/fullstack-javascript-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/igorbriukhovetskii/fullstack-javascript-project-lvl1/actions)
-<a href="https://codeclimate.com/github/igorbriukhovetskii/fullstack-javascript-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/19894ff27060124f8657/maintainability" /></a>
+<a href="https://codeclimate.com/github/igorbriukhovetskii/fullstack-javascript-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/19894ff27060124f8657/maintainability" /></a>[![asciicast](https://asciinema.org/a/CpIQyQYxRQ7R5IbU7TVJsfTdm.svg)](https://asciinema.org/a/CpIQyQYxRQ7R5IbU7TVJsfTdm)
