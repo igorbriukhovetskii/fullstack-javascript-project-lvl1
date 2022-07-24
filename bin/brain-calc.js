@@ -2,11 +2,12 @@
 import readlineSync from 'readline-sync';
 import getUserName from '../src/cli.js';
 import getRandomNumber from '../src/get-random-number.js';
+import getMathOperator from '../src/games/brain-calc/get-math-operator.js';
+import getCorrectAnswer from '../src/games/brain-calc/get-correct-answer.js';
 import isWinner from '../src/is-winner.js';
-import getCorrectAnswer from '../src/get-correct-answer.js';
 
 const userName = getUserName();
-const startQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+const startQuestion = 'What is the result of the expression?';
 const winMessage = 'Correct!';
 const congratsMessage = `Congratulations, ${userName}!`;
 
@@ -22,12 +23,14 @@ let wins = 0;
 let continueGame = true;
 
 while (wins < 3 && continueGame) {
-  const randomNumber = getRandomNumber(1, 1000);
+  const leftOperand = getRandomNumber(1, 100);
+  const rightOperand = getRandomNumber(1, 10);
+  const operator = getMathOperator();
 
-  console.log(`Question: ${randomNumber}`);
+  console.log(`Question: ${leftOperand} ${operator} ${rightOperand}`);
 
   const userAnswer = readlineSync.question('Your answer: ');
-  const correctAnswer = getCorrectAnswer(randomNumber);
+  const correctAnswer = getCorrectAnswer(leftOperand, rightOperand, operator);
 
   if (isWinner(correctAnswer, userAnswer)) {
     wins += 1;
