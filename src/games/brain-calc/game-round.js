@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../../get-random-number.js';
 import getMathOperator from './get-math-operator.js';
-import getCorrectAnswer from './get-correct-answer.js';
+import calculate from './calculate.js';
 import isWinner from '../../is-winner.js';
 
 const gameRound = () => {
@@ -12,7 +12,7 @@ const gameRound = () => {
   console.log(`Question: ${leftOperand} ${operator} ${rightOperand}`);
 
   const userAnswer = readlineSync.question('Your answer: ');
-  const correctAnswer = getCorrectAnswer(leftOperand, rightOperand, operator);
+  const correctAnswer = calculate(leftOperand, rightOperand, operator);
   const isRoundWon = isWinner(userAnswer, correctAnswer);
 
   return {

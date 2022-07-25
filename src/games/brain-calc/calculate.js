@@ -1,4 +1,4 @@
-const getCorrectAnswer = (num1, num2, operator) => {
+const calculate = (num1, num2, operator) => {
   let result = null;
 
   switch (operator) {
@@ -18,4 +18,4 @@ const getCorrectAnswer = (num1, num2, operator) => {
   return result.toString();
 };
 
-export default getCorrectAnswer;
+export default calculate;

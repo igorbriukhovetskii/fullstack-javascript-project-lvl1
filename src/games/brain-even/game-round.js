@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../../get-random-number.js';
-import getCorrectAnswer from '../../get-correct-answer.js';
+import isEven from './is-even.js';
 import isWinner from '../../is-winner.js';
 
 const gameRound = () => {
@@ -9,7 +9,7 @@ const gameRound = () => {
   console.log(`Question: ${randomNumber}`);
 
   const userAnswer = readlineSync.question('Your answer: ');
-  const correctAnswer = getCorrectAnswer(randomNumber);
+  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
   const isRoundWon = isWinner(userAnswer, correctAnswer);
 
   return {
