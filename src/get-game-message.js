@@ -8,6 +8,9 @@ const getGameMessage = (type, userName, userAnswer, correctAnswer) => {
     case 'start-calc':
       message = 'What is the result of the expression?';
       break;
+    case 'start-gcd':
+      message = 'Find the greatest common divisor of given numbers.';
+      break;
     case 'win':
       message = 'Correct!';
       break;
