@@ -5,19 +5,11 @@ import getRandomNumber from '../src/get-random-number.js';
 import getMathOperator from '../src/games/brain-calc/get-math-operator.js';
 import getCorrectAnswer from '../src/games/brain-calc/get-correct-answer.js';
 import isWinner from '../src/is-winner.js';
+import getGameMessage from '../src/get-game-message.js';
 
 const userName = getUserName();
-const startQuestion = 'What is the result of the expression?';
-const winMessage = 'Correct!';
-const congratsMessage = `Congratulations, ${userName}!`;
 
-const getFailMessage = (falseAnswer, trueAnswer) => {
-  const message = `'${falseAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${userName}!`;
-
-  return message;
-};
-
-console.log(startQuestion);
+console.log(getGameMessage('start-calc'));
 
 let wins = 0;
 let continueGame = true;
@@ -34,13 +26,13 @@ while (wins < 3 && continueGame) {
 
   if (isWinner(correctAnswer, userAnswer)) {
     wins += 1;
-    console.log(winMessage);
+    console.log(getGameMessage('win'));
   } else {
     continueGame = false;
-    console.log(getFailMessage(userAnswer, correctAnswer));
+    console.log(getGameMessage('fail', userName, userAnswer, correctAnswer));
   }
 }
 
 if (wins === 3) {
-  console.log(congratsMessage);
+  console.log(getGameMessage('congrats', userName));
 }
