@@ -14,6 +14,9 @@ const getGameMessage = (type, userName, userAnswer, correctAnswer) => {
     case 'start-progression':
       message = 'What number is missing in the progression?';
       break;
+    case 'start-prime':
+      message = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+      break;
     case 'win':
       message = 'Correct!';
       break;
