@@ -11,6 +11,9 @@ const getGameMessage = (type, userName, userAnswer, correctAnswer) => {
     case 'start-gcd':
       message = 'Find the greatest common divisor of given numbers.';
       break;
+    case 'start-progression':
+      message = 'What number is missing in the progression?';
+      break;
     case 'win':
       message = 'Correct!';
       break;
