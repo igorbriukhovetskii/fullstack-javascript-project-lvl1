@@ -13,12 +13,11 @@ const gameProgress = (game, userName) => {
     } else {
       continueGame = false;
       console.log(getGameMessage('fail', userName, gameRound.userAnswer, gameRound.correctAnswer));
+      return;
     }
   }
 
-  if (wins === 3) {
-    console.log(getGameMessage('congrats', userName));
-  }
+  console.log(getGameMessage('congrats', userName));
 };
 
 export default gameProgress;
