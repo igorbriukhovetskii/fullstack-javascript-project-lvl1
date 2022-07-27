@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "[![Actions Status](https://github.com/igorbriukhovetskii/fullstack-javascript-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/igorbriukhovetskii/fullstack-javascript-project-lvl1/actions)",
   "main": "index.js",
   "scripts": {
